@@ -1,5 +1,5 @@
 FROM stefanscherer/chocolatey
-MAINTAINER peter.pouliot@rakuten.com
+MAINTAINER peter@pouliot.net
 ENV SLACK_TOKEN 1122334455667799
 RUN choco install python3 wget curl git -y
 RUN wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
