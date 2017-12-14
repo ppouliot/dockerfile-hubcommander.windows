@@ -13,7 +13,7 @@ RUN pip install rtmbot
 RUN git clone https://github.com/Netflix/hubcommander
 RUN pip install .\hubcommander
 RUN powershell.exe rm -Force hubcommander\setup.py
-RUN powershell.exe rm -Force hubcommander\tests
+RUN powershell.exe rm -Recurse -Force hubcommander\tests
 RUN echo 'DEBUG: True' > rtmbot.conf
 RUN echo 'SLACK_TOKEN: "${SLACK_TOKEN}"' >> rtmbot.conf
 RUN echo 'ACTIVE_PLUGINS:' >> rtmbot.conf
